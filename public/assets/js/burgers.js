@@ -65,11 +65,13 @@
 
 $(function () {
     // Event handler for 'DEVOUR IT' button
-    $(".change-devour").on("click", function (event) {
+    $(".devourBurger").on("click", function (event) {
+        console.log("works")
       let id = $(this).data("id");
       let newDevour = $(this).data("newdevour");
+      console.log("is this working?", newDevour)
       let newDevourState = {
-        devoured: newDevour,
+        devoured: true,
       };
   
       // PUT request
@@ -84,7 +86,7 @@ $(function () {
     });
   
     // Event handler for adding burgers
-    $(".create-form").on("submit", (event) => {
+    $(".createForm").on("submit", (event) => {
       event.preventDefault();
   
       let newDevour = $(this).data("newdevour");
@@ -92,7 +94,7 @@ $(function () {
         devoured: newDevour,
       };
       const newBurger = {
-        burger_name: $("#burger").val().trim(),
+        burger_name: $("#newBurger").val().trim(),
         devoured: newDevourState,
       };
   
@@ -101,7 +103,7 @@ $(function () {
         type: "POST",
         data: newBurger,
       }).then(() => {
-        // console.log("created new burger");
+        console.log("created new burger");
         // Reload the page to get the updated list
         location.reload();
       });

@@ -1,6 +1,6 @@
-INSERT INTO burgers (name) VALUES ('');
-INSERT INTO burgers (name) VALUES ('Charlie');
-INSERT INTO burgers (name, eaten) VALUES ('Poppy', true);
-INSERT INTO burgers (name, eaten) VALUES ('Oscar', true);
-INSERT INTO burgers (name, eaten) VALUES ('Smudge', true);
-INSERT INTO burgers (name) VALUES ('Daisy');
+use burgers_DB;
+
+-- MOCK DATA --
+INSERT INTO burgers (burger_name, devoured) VALUES ('Veggie Burger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Cheeseburger', false);
+INSERT INTO burgers (burger_name, devoured) VALUES ('Hamburger', true);
