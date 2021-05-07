@@ -18,7 +18,7 @@ Clone repo to local machine, seed your database with the provided schema and see
 
 
 ### Screenshot:
-![Image](/assets/img/burgerapp.png)
+![Image](public/assets/img/burgerapp.PNG)
 <br />
 <br />
 GitHib Link: https://github.com/Bartok1945/burger_app <br /><br />
